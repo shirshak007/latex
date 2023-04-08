@@ -1,0 +1,15 @@
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage{datetime2}
+
+\DTMnewdatestyle{mydatestyle}{%
+  \renewcommand{\DTMdisplaydate}[4]{%
+	  \DTMtwodigits{##3} \DTMenglishmonthname{##2}, ##1}%
+  \renewcommand{\DTMDisplaydate}{\DTMdisplaydate}%
+}
+
+\DTMsetdatestyle{mydatestyle}
+
+\begin{document}
+\DTMdate{2023-04-08}
+\end{document}
